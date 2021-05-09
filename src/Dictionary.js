@@ -73,21 +73,28 @@ export default function Dictionary(props) {
           {items}
         </Masonry>
         <section>
-          <form onSubmit={handleSubmit}>
-            <h3>What word do you want to look up?</h3>
-            <input
-              type="search"
-              placeholder="Search for a word"
-              defaultValue={props.defaultKeyword}
-              autoFocus={true}
-              className="form-control search-input"
-              onChange={handleKeywordChange}
-            />
-          </form>
+          <div className="col-8">
+            <form onSubmit={handleSubmit}>
+              <h3>What word do you want to look up?</h3>
+              <input
+                type="search"
+                placeholder="Search for a word"
+                defaultValue={props.defaultKeyword}
+                autoFocus={true}
+                className="form-control search-input"
+                onChange={handleKeywordChange}
+              />
+            </form>
+            <Phonetic />
+          </div>
         </section>
-        <Result definition={definition} />
-        <Photos photos={photos} />
-        <Phonetic />
+        <div className="row">
+          <Result definition={definition} />
+        </div>
+        <div className="row">
+          {" "}
+          <Photos photos={photos} />
+        </div>
       </div>
     );
   } else {
