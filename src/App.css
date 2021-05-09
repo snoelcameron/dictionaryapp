@@ -5,17 +5,41 @@ body {
   background-color: #16181d;
 }
 
-h1 {
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: auto;
+}
+.my-masonry-grid_column {
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > div {
+  background: #ffb2b2;
+  border-radius: 22px;
+  margin: 22px 11px;
+  padding: 30px;
+}
+
+.App-header {
+  text-align: center;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+h2 {
   color: #ffffff;
   font-weight: 500;
   font-size: 24px;
 }
 
-h2 {
+h3 {
   color: #ffffff;
   font-size: 18px;
 }
-p {
-  color: #ffffff;
-  font-size: 40px;
+
+.meaning {
+  border: #ffffff;
+  border-radius: 1px;
 }

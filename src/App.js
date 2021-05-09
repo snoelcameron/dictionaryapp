@@ -1,5 +1,4 @@
 import "./App.css";
-import About from "./About";
 import Dictionary from "./Dictionary";
 
 function App() {
@@ -7,10 +6,9 @@ function App() {
     <div className="App">
       <div className="Container">
         <header className="App-header">
-          <p>Dictionary App</p>
+          <h1>Dictionary App</h1>
         </header>
-        <Dictionary defaultKeyword="cat" />
-        <About />
+        <Dictionary />
       </div>
     </div>
   );

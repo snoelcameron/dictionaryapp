@@ -4,6 +4,25 @@ import Result from "./Result";
 import Photos from "./Photos";
 import Phonetic from "./Phonetic";
 import "./App.css";
+import Masonry from "react-masonry-css";
+import About from "./About";
+
+let items = [
+  { id: 1, name: <Dictionary /> },
+  { id: 2, name: <Phonetic /> },
+  { id: 3, name: <Result /> },
+  { id: 4, name: <Photos /> },
+  { id: 5, name: <About /> },
+];
+items = items.map(function (item) {
+  return <div key={item.id}>{item.name}</div>;
+});
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1,
+};
 
 export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -46,9 +65,16 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {items}
+        </Masonry>
         <section>
           <form onSubmit={handleSubmit}>
-            <label>What word do you want to look up?</label>
+            <h3>What word do you want to look up?</h3>
             <input
               type="search"
               placeholder="Search for a word"
@@ -58,9 +84,7 @@ export default function Dictionary(props) {
               onChange={handleKeywordChange}
             />
           </form>
-          <small className="hint">i.e. paris, wine, yoga, coding</small>
         </section>
-        <Phonetic />
         <Result definition={definition} />
         <Photos photos={photos} />
       </div>
