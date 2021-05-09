@@ -8,11 +8,14 @@ body {
 h1 {
   color: #ffffff;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 24px;
 }
 
 h2 {
   color: #ffffff;
-  font-weight: 500;
+  font-size: 18px;
+}
+p {
+  color: #ffffff;
   font-size: 40px;
 }

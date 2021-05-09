@@ -1,8 +1,5 @@
 import "./App.css";
-import Phonetic from "./Phonetic";
-import Result from "./Result";
 import About from "./About";
-import Photos from "./Photos";
 import Dictionary from "./Dictionary";
 
 function App() {
