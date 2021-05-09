@@ -43,3 +43,11 @@ h3 {
   border: #ffffff;
   border-radius: 1px;
 }
+
+button {
+  border-radius: 30px;
+  border-color: transparent;
+  padding: 5px 5px 5px 13px;
+  background-color: #ffd36e;
+  color: #000000;
+}

@@ -8,10 +8,10 @@ import Masonry from "react-masonry-css";
 import About from "./About";
 
 let items = [
-  { id: 1, name: <Dictionary /> },
-  { id: 2, name: <Phonetic /> },
-  { id: 3, name: <Result /> },
-  { id: 4, name: <Photos /> },
+  { id: 1, name: "word" },
+  { id: 2, name: "Phonetic" },
+  { id: 3, name: "Definition" },
+  { id: 4, name: "Photos" },
   { id: 5, name: <About /> },
 ];
 items = items.map(function (item) {
@@ -87,6 +87,7 @@ export default function Dictionary(props) {
         </section>
         <Result definition={definition} />
         <Photos photos={photos} />
+        <Phonetic />
       </div>
     );
   } else {
