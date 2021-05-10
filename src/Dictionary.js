@@ -1,28 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Result from "./Result";
 import Photos from "./Photos";
 import Phonetic from "./Phonetic";
-import "./App.css";
-import Masonry from "react-masonry-css";
+import Synonym from "./Synonym";
 import About from "./About";
-
-let items = [
-  { id: 1, name: "word" },
-  { id: 2, name: "Phonetic" },
-  { id: 3, name: "Definition" },
-  { id: 4, name: "Photos" },
-  { id: 5, name: <About /> },
-];
-items = items.map(function (item) {
-  return <div key={item.id}>{item.name}</div>;
-});
-const breakpointColumnsObj = {
-  default: 4,
-  1100: 3,
-  700: 2,
-  500: 1,
-};
+import "./App.css";
 
 export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -64,38 +48,26 @@ export default function Dictionary(props) {
 
   if (loaded) {
     return (
-      <div className="Dictionary">
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
-        >
-          {items}
-        </Masonry>
-        <section>
-          <div className="col-8">
-            <form onSubmit={handleSubmit}>
-              <h3>What word do you want to look up?</h3>
-              <input
-                type="search"
-                placeholder="Search for a word"
-                defaultValue={props.defaultKeyword}
-                autoFocus={true}
-                className="form-control search-input"
-                onChange={handleKeywordChange}
-              />
-            </form>
-            <Phonetic />
-          </div>
-        </section>
-        <div className="row">
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry>
+          <form onSubmit={handleSubmit}>
+            <h3>What word do you want to look up?</h3>
+            <input
+              type="search"
+              placeholder="Search for a word"
+              defaultValue={props.defaultKeyword}
+              autoFocus={true}
+              className="form-control search-input"
+              onChange={handleKeywordChange}
+            />
+          </form>
+          <Phonetic />
           <Result definition={definition} />
-        </div>
-        <div className="row">
-          {" "}
+          <Synonym />
+          <About />
           <Photos photos={photos} />
-        </div>
-      </div>
+        </Masonry>
+      </ResponsiveMasonry>
     );
   } else {
     load();
