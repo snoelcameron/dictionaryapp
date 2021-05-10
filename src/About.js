@@ -4,7 +4,7 @@ import "./App.css";
 export default function About() {
   return (
     <div className="AboutSection">
-      <h1>About</h1>
+      <h2>About</h2>
       <div className="AboutText">
         <a
           href="https://github.com/snoelcameron/dictionaryapp"

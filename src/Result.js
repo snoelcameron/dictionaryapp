@@ -7,18 +7,18 @@ export default function Result(props) {
   if (props.definition) {
     return (
       <div className="Result">
-        <section>
-          <h1>{props.definition.word}</h1>
+        <div>
+          <h2>{props.definition.word}</h2>
           {props.definition.phonetics.map(function (phonetic, index) {
             return <Phonetic phonetic={phonetic} key={index} />;
           })}
-        </section>
+        </div>
 
         {props.definition.meanings.map(function (meaning, index) {
           return (
-            <section key={index}>
+            <div key={index}>
               <Meaning meaning={meaning} />
-            </section>
+            </div>
           );
         })}
       </div>

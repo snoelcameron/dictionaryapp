@@ -4,7 +4,7 @@ import "./App.css";
 export default function Photos(props) {
   if (props.photos.length) {
     return (
-      <section className="Photos">
+      <div className="Photos">
         <div className="row">
           {props.photos.map(function (photo, index) {
             return (
@@ -24,7 +24,7 @@ export default function Photos(props) {
             );
           })}
         </div>
-      </section>
+      </div>
     );
   } else {
     return null;

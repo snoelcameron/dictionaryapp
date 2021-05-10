@@ -1,20 +1,20 @@
 body {
-  font-family: "Atkinson hyperlegible";
+  font-family: "Atkinson-Hyperlegible-Regular";
   color: #ffffff;
   margin: auto;
   background-color: #16181d;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
-  color: #ffffff;
-  font-weight: 100;
+  font-weight: bolder;
   font-size: 24px;
 }
 
 h3 {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 16px;
 }
 
 button {
@@ -61,7 +61,26 @@ button {
   padding: 30px;
 }
 
-.Photos {
+.Photos img {
   border-radius: 22px;
-  margin: 22px 11px;
+  margin: 11px 11px;
+}
+
+.Dictionary .Masonry {
+  column-count: 3;
+  column-gap: 22px;
+}
+
+.Dictionary #Sound {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+#definitionResult {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
 }

@@ -61,8 +61,8 @@ export default function Dictionary(props) {
               onChange={handleKeywordChange}
             />
           </form>
-          <Phonetic />
-          <Result definition={definition} />
+          <Phonetic className="Sound" />
+          <Result className="definitionResult" definition={definition} />
           <Synonym />
           <About />
           <Photos photos={photos} />
