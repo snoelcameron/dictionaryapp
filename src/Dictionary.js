@@ -63,9 +63,9 @@ export default function Dictionary(props) {
         <div class="col">
           <Result className="definitionResult" definition={definition} />
           <Phonetic className="Sound" />
-          <About />
         </div>
         <Photos photos={photos} />
+        <About />
       </div>
     );
   } else {
