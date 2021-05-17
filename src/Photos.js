@@ -1,6 +1,4 @@
 import React from "react";
-
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "./App.css";
 
 export default function Photos(props) {
