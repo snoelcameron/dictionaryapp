@@ -1,4 +1,6 @@
 import React from "react";
+
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "./App.css";
 
 export default function Photos(props) {
@@ -15,7 +17,7 @@ export default function Photos(props) {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={photo.src.landscape}
+                    src={photo.src.portrait}
                     className="img-fluid"
                     alt={photo.photographer}
                   />
