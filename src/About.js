@@ -21,8 +21,14 @@ export default function About() {
           >
             Netlify{" "}
           </a>
-          <br />
-          By{" "}
+          Also, go view my{" "}
+          <a
+            href="https://wonderful-bohr-ec4c13.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Weather App{" "}
+          </a>
           <a
             href="https://www.linkedin.com/in/sarah-noel-960740b2/"
             target="_blank"
@@ -30,7 +36,6 @@ export default function About() {
           >
             Sarah Noel
           </a>{" "}
-          <br />
           from Intellisports👩‍💻
         </div>
       </div>
